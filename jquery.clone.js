@@ -15,7 +15,11 @@
 	jQuery.extend({
 
 		// Returns a clone of the given object
-		clone: function(obj) {
+		cloneObj: function(obj) {
+			if (!obj || "object" !== typeof obj) {
+				return { };
+			}
+
 			return jQuery.extend(true, { }, obj);
 		}
 
